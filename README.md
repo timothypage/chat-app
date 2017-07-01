@@ -28,7 +28,7 @@ then
 
 	foreman start
 
-will start the web server
+will start the web server, head to http://localhost:5000
 
 # TODO
 
