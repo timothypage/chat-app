@@ -17,6 +17,7 @@ if you want to use docker to start Postgres/Redis
 if not, its preconfigured to look for Postgres/Redis on local ports 5432 and 6379 repectively
 
 then, the first time...
+
 	bundle install
 	yarn
 
