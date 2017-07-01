@@ -13,6 +13,22 @@ App.room = App.cable.subscriptions.create({channel: "RoomChannel", room: 1}, {
   received: function(data) {
   	console.log("RECEIVING FROM ROOM CHANNEL")
   	console.log(data)
+
+    let messages_list = document.getElementById('messages')
+
+    let username = document.createElement('div')
+    username.classList.add('username')
+    username.innerText = data.sent_by || "Anonymous"
+
+    let contents = document.createElement('div')
+    contents.classList.add('message-contents')
+    contents.innerText = data.message
+
+    let list_item = document.createElement('li')
+    list_item.appendChild(username)
+    list_item.appendChild(contents)
+
+    messages_list.appendChild(list_item)
     // Called when there's incoming data on the websocket for this channel
   },
 
