@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Getting Started
 
-* Ruby version
+if you want to use docker to start Postgres/Redis
 
-* System dependencies
+  docker-compose up -d
 
-* Configuration
+then
 
-* Database creation
+	foreman start
 
-* Database initialization
+will start the web server
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
