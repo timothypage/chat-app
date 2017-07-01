@@ -3,7 +3,8 @@ module ApplicationCable
   	identified_by :current_user
 
   	def connect 
-  		if user = User.find(1)
+  		if user = User.find_by(id: cookies.signed[:user_id])
+
   			self.current_user = user
   		else
   			reject_unauthorized_connection

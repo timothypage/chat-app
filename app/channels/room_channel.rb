@@ -1,4 +1,5 @@
 class RoomChannel < ApplicationCable::Channel
+
   def subscribed
     stream_from "room_1"
   end
@@ -8,7 +9,7 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-  	Rails.logger.info("received message")
+    data["sent_by"] = current_user.username
   	ActionCable.server.broadcast("room_1", data)
   end
 
